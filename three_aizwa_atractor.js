@@ -13,7 +13,7 @@ document.body.appendChild( renderer.domElement );
 var geometry = new THREE.Geometry();
 
 
-var maxPts = 500000;
+var maxPts = 1000000;
 for (i = 0; i < maxPts; i ++) 
 { 
   var vertex = new THREE.Vector3();
@@ -27,7 +27,7 @@ for (i = 0; i < maxPts; i ++)
   vertex.e = 0.25;
   vertex.f = 0.1;
 
-  vertex.dt = Math.random()*0.8 + 0.01;
+  vertex.dt = Math.random()*0.5 + 0.01;
   geometry.vertices.push( vertex );
 }
 
