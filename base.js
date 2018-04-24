@@ -34,14 +34,15 @@ function draw()
 {
   background('black');
 
-  translate(0, 200, 0);
+
+  translate(0, 100, 0);
 
   /**
    * Rotamos los ejes
    */
-  rotateZ(1.38);
-  rotateX(-1.38);
-  rotateY(1.38);
+  rotateZ(1.34);
+  rotateX(-1.34);
+  rotateY(1.34);
 
   /**
    * Manipular con el mouse (click)
@@ -54,7 +55,7 @@ function draw()
   scale(8);
 
   /**Añadimos puntos al arreglo */
-  añadirPuntos(2);
+  añadirPuntos(100);
 
 
   /**
@@ -66,9 +67,9 @@ function draw()
    * Creamos la forma
    */
   beginShape()
+  let color = 0;
   puntos.forEach( p => {
     vertex(p.x, p.y, p.z);
-    
   });
   endShape()
 
@@ -81,7 +82,7 @@ function añadirPuntos(num){
      * calculamos de las derivadas
      */
 
-    let dt = 0.01;  
+    let dt = 0.001;  
     
     let dx = (a * (y - x)) * dt;
     let dy = (x * (b - z) - y) * dt;
